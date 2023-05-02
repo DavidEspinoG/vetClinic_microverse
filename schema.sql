@@ -10,3 +10,6 @@ CREATE TABLE animals (
     neutered BOOLEAN,
     weight_kg FLOAT
 );
+
+ALTER TABLE animals
+ADD species varchar(20);

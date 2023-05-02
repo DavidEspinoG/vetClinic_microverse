@@ -140,7 +140,7 @@ to see queries examples you could use
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/DavidEspinoG/vet_clinic_microverse/issues).
+Feel free to check the [issues page](https://github.com/DavidEspinoG/vetClinic_microverse/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

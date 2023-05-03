@@ -51,3 +51,28 @@ ADD COLUMN owner_id INT;
 ALTER TABLE animals
     ADD CONSTRAINT fk_owners FOREIGN KEY (owner_id)
     REFERENCES owners (id);
+
+-- Join table (many-to-many)
+
+CREATE TABLE vets (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(20), 
+    age SMALLINT, 
+    date_of_gratuation DATE, 
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE specializations (
+    vet_id INT,
+    species_id INT,
+    FOREIGN KEY (vet_id) REFERENCES vets (id), 
+    FOREIGN KEY (species_id) REFERENCES species (id)
+);
+
+CREATE TABLE visits (
+    vet_id INT, 
+    animal_id INT,
+    date_of_visit DATE, 
+    FOREIGN KEY (vet_id) REFERENCES vets (id),
+    FOREIGN KEY (animal_id) REFERENCES animals (id)
+);
